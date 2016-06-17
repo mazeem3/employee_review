@@ -12,14 +12,14 @@ class Employee
     def add_review(review)
         @reviews << review
     end
-    
+
     def determine_performance(review)
         if review == 'performance has exceeded expectations'
-             'Great job, you deserve a raise!'
+            @performance = 'satisfactory'
         elsif review == 'performance has been satisfactory'
-             'Keep up the good work, still have room for improvement'
+            @performance = 'satisfactory'
         else (review == 'performance has not met expectations')
-             'Come see me in my office'
+             @performance = 'unsatisfactory'
         end
     end
 
